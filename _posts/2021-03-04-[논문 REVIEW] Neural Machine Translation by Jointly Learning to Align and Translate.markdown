@@ -1,5 +1,5 @@
 ---
-title: "[논문 리뷰] MIND: A Large-scale Dataset for News Recommendation"
+title: "논문 REVIEW - Neural Machine Translation by Jointly Learning to Align and Translate"
 layout: post
 date: 2020-01-10
 image: ../assets/images/markdown.jpg
