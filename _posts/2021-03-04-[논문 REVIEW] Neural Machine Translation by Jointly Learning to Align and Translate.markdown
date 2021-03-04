@@ -60,7 +60,7 @@ $$
 
 본 논문에서 제시하는 모델 역시 그 기본은 이전의 RNN Encoder-Decoder에 기초하고 있습니다. 하지만 그 설계 방식에는 encoder와 decoder 부분에 모두 차이가 있습니다. 아래 그림을 보면서 설명드리겠습니다.
 
-![model_arch](images/posts/210304/model_arch.png)
+![model_arch](/assets/images/gb/210304/model_arch.png)
 
 ### (1) Encoder
 
@@ -108,7 +108,7 @@ $a_{ij}$는 $e_{ij}$를 확률값으로 변환한 것입니다(softmax). 그리�
 
 ## 4. Experiment Settings / Results
 
-![result_sentence_len](images/posts/210304/result_sentence_len.png)
+![result_sentence_len](/assets/images/gb/210304//result_sentence_len.png)
 
 해당 실험의 결과는 놀라웠습니다. 실험에서는 총 2가지 타입의 모델을 사용했습니다. 첫번째 모델로는 논문에서 제시한 RNNsearch, 두번째 모델로는 기존 모델인 RNNenc입니다. 실험을 위해서 저자들은 각 모델을 2차례 학습시켰는데, 처음에는 max length를 30 words로 설정했고 그 다음에는 50 words로 설정했습니다. 그리하여 총 4가지 모델에 대한 실험을 진행했고 위의 그림과 같은 결과를 보였습니다.
 
@@ -118,7 +118,7 @@ Alignment의 결과는 아래 그림과 같았습니다. 해당 그림은 논문
 
 영어-프랑스어 문장 사이 연관성이 대체로 monotonic한 관계성을 지니지만 한편으로는 non-monotonic한 관계를 관찰할 수 있습니다. 실제로 그림 (a)를 보면 모델이 [European Economic Area]를 [zone economique europeen]으로 번역했음을 알 수 있습니다. 또한 해당 그림을 통해 모델이 'soft-alignment', 즉 하나의 단어가 두 개 이상의 단어 정보를 조합하여 생성되거나(many-to-one) 혹은 그 반대의 경우(one-to-many)도 존재할 수 있음을 알 수 있습니다. 이는 'hard-alignment'에 비해 확실히 더 유연한 번역을 가능하게 합니다.
 
-![result_alignment_matrix](images/posts/210304/result_alignment_matrix.png)
+![result_alignment_matrix](/assets/images/gb/210304/result_alignment_matrix.png)
 
 특히 해당 그림은 기존에 해석이 어려웠던 neural network 기반의 번역 모델을 시각화했다는 점에서 큰 의의를 지닙니다. 모델이 source input과 generated output 사이에서 어떠한 방식으로 mapping을 진행하고 있는지 확인할 수 있기 때문입니다.
 
