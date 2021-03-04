@@ -51,6 +51,7 @@ c = q(h_1,...,h_{T_x})
 $
 
 Encoder에서 출력되는 각 hidden states는 이전 타임스텝에서의 hidden state와 input word(token) embedding의 비선형결합으로 생성됩니다. 이 역시 수식으로 표현하면 다음과 같습니다. 참고로 Sutskever et al.(2014)의 seq2seq 논문에서는 비선형결합(수식의 $f$,$q$)으로 LSTM을 사용합니다.
+  
 $$
 h_t = f(x_t, h_{t-1})
 $$
