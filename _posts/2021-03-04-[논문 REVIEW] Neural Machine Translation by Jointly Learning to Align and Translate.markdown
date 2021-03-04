@@ -11,8 +11,6 @@ description: "논문 REVIEW - Neural Machine Translation by Jointly Learning to 
 use_math: true
 ---
 
-# 논문 REVIEW - Neural Machine Translation by Jointly Learning to Align and Translate
-
 ## Hong Gibong / 2021년 3월 4일
 
 * 해당 논문의 원본은 https://arxiv.org/abs/1409.0473 에서 확인할 수 있습니다.
