@@ -1,5 +1,11 @@
 ---
-title: Efficient Estimation of Word Representations in Vector Space - Word2Vec
+title: 논문 REVIEW - Efficient Estimation of Word Representations in Vector Space
+layout: post
+date: 2021-03-04
+category: blog
+author: mh
+description: 논문 REVIEW - Efficient Estimation of Word Representations in Vector Space
+use_math: true
 ---
 
 <p style='width: 800px' align='center'><img src="https://user-images.githubusercontent.com/37925813/109913652-b9bbfe80-7cf1-11eb-8a9a-6b474b7c3216.jpg"></p>
