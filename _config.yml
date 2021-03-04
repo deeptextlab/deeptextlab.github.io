@@ -2,6 +2,13 @@
 name: Deep Text Lab
 bio: Yonsei University NLP Lab
 
+# Conversion
+markdown: kramdown
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
 # twitter summary info
 description: Yonsei Deep Text Lab
 
