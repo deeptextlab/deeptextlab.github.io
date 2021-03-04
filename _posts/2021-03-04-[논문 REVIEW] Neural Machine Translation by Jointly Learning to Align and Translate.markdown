@@ -11,6 +11,8 @@ description: "논문 REVIEW - Neural Machine Translation by Jointly Learning to 
 use_math: true
 ---
 
+  
+    
 * 해당 논문의 원본은 https://arxiv.org/abs/1409.0473 에서 확인할 수 있습니다.
 * 현재 작성된 버전은 미완성본입니다. 스터디 발표 이후에 부족한 내용을 보완해서 최종 업로드할 예정입니다. 참고 부탁드립니다.
 * 특히 논문 내용 중 수식과 관련한 내용은 수업 중에 보다 더 자세히 설명드리겠습니다 :)
