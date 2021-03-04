@@ -1,7 +1,7 @@
 ---
 title: "논문 REVIEW - Neural Machine Translation by Jointly Learning to Align and Translate"
 layout: post
-date: 2020-01-10
+date: 2021-03-04
 image: ../assets/images/markdown.jpg
 headerImage: false
 tag:
@@ -10,8 +10,6 @@ author: gb
 description: "논문 REVIEW - Neural Machine Translation by Jointly Learning to Align and Translate"
 use_math: true
 ---
-
-## Hong Gibong / 2021년 3월 4일
 
 * 해당 논문의 원본은 https://arxiv.org/abs/1409.0473 에서 확인할 수 있습니다.
 * 현재 작성된 버전은 미완성본입니다. 스터디 발표 이후에 부족한 내용을 보완해서 최종 업로드할 예정입니다. 참고 부탁드립니다.
