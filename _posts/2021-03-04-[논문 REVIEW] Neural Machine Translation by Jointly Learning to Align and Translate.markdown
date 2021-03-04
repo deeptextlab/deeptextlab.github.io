@@ -39,9 +39,11 @@ Attention은 기존 RNN 기반 encoder-decoder 모델의(Seq2Seq) 단일 context
 ## 2. Background: Neural Machine Translation
 
 인공신경망 기반의 기계 번역은 대개 'source sentence **x**'를 인코딩해서 'target sentence **y**'로 디코딩하는 두 가지 단계로 진행됩니다. 이러한 RNN 기반의 Encoder-Decoder에 대해 간단히 표현하자면, source sentence가 주어졌을 때 대상이 되는 target sentence가 등장할 조건부 확률을 최대화하는 번역 작업을 진행하는 것입니다. 이를 수식으로 나타내면 다음과 같습니다.
-$$
+
+$
 p(y) = \prod_{t=1}^{T} p(y_t | y_1,...,y_{t-1}, c)
-$$
+$
+
 여기서 사용된 $c$ 는 디코더의 모든 time step에서 공유하는 context vector로, 이는 encoder의 매 time step에서 매핑되는 hidden states의 비선형결합에 의해 정의됩니다. 이를 수식으로 표현하면 다음과 같습니다.
 $$
 c = q(h_1,...,h_{T_x})
