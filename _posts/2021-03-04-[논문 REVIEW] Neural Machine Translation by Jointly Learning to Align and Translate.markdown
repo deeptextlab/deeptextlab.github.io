@@ -8,7 +8,7 @@ tag:
 category: blog
 author: gb
 description: "논문 REVIEW - Neural Machine Translation by Jointly Learning to Align and Translate"
-math: true
+use_math: true
 ---
 
 # 논문 REVIEW - Neural Machine Translation by Jointly Learning to Align and Translate
