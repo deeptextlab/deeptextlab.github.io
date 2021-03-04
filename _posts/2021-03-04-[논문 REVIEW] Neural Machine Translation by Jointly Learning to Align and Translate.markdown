@@ -17,6 +17,8 @@ use_math: true
 * 현재 작성된 버전은 미완성본입니다. 스터디 발표 이후에 부족한 내용을 보완해서 최종 업로드할 예정입니다. 참고 부탁드립니다.
 * 특히 논문 내용 중 수식과 관련한 내용은 수업 중에 보다 더 자세히 설명드리겠습니다 :)
 
+<br><br>
+
 해당 논문이 세상에 나온 지 5년이 지났습니다. 그리고 현재 attention은 여러 분야에서 단일 기술로 활용되고 있습니다. 기계 번역의 퀄리티를 높이기 위해 RNN/LSTM에 대한 보조적 수단으로 사용된 attention이 self-attention으로 발전했고, 오직 이 attention 메커니즘 만으로 Transformer를 구성했습니다. Transformer는 최근 자연어생성(NLG) 및 자연어이해(NLU) 관련 다양한 task에서 SOTA를 기록하는데 기여했습니다. 자연어처리 분야의 일부 연구자들은 Attention의 등장을 '단어 임베딩'만큼이나 중요한 turning point로 생각하는데, 성능을 올려주었을 뿐만 아니라 Alignment Matrix를 통해 그 해석 가능성을 만들어주었다는 점에서 충분히 높은 평가를 받을 만하다고 저 역시도 생각합니다.(Alignment Matrix에 대해서는 논문 본문에서 설명하겠습니다.)
 
 ![seq2seq_bottleneck](/assets/images/gb/210304/seq2seq_bottleneck.png)
@@ -42,19 +44,21 @@ Attention은 기존 RNN 기반 encoder-decoder 모델의(Seq2Seq) 단일 context
 
 인공신경망 기반의 기계 번역은 대개 'source sentence **x**'를 인코딩해서 'target sentence **y**'로 디코딩하는 두 가지 단계로 진행됩니다. 이러한 RNN 기반의 Encoder-Decoder에 대해 간단히 표현하자면, source sentence가 주어졌을 때 대상이 되는 target sentence가 등장할 조건부 확률을 최대화하는 번역 작업을 진행하는 것입니다. 이를 수식으로 나타내면 다음과 같습니다.
 
-$
+$$
 p(y) = \prod_{t=1}^{T} p(y_t | y_1,...,y_{t-1}, c)
-$
+$$
 
 여기서 사용된 $c$ 는 디코더의 모든 time step에서 공유하는 context vector로, 이는 encoder의 매 time step에서 매핑되는 hidden states의 비선형결합에 의해 정의됩니다. 이를 수식으로 표현하면 다음과 같습니다.
 
-$
+$$
 c = q(h_1,...,h_{T_x})
-$
+$$
 
 Encoder에서 출력되는 각 hidden states는 이전 타임스텝에서의 hidden state와 input word(token) embedding의 비선형결합으로 생성됩니다. 이 역시 수식으로 표현하면 다음과 같습니다. 참고로 Sutskever et al.(2014)의 seq2seq 논문에서는 비선형결합(수식의 $f$,$q$)으로 LSTM을 사용합니다.
   
-$$h_t = f(x_t, h_{t-1})$$
+$$
+h_t = f(x_t, h_{t-1})
+$$
 
 
 ## 3. Learning to ALIGN and TRANSLATE
@@ -92,7 +96,6 @@ $$
 
 그렇다면 다시 $a_{ij}$, 즉 'input의 j번째 단어와 output의 i번째 단어가 얼마나 관련이 있는지를 의미하는 가중치'를 구하는 수식을 알아보겠습니다.
 
-![스크린샷 2021-03-04 오전 1.49.31](/Users/gibonghong/Library/Application Support/typora-user-images/스크린샷 2021-03-04 오전 1.49.31.png
 $$
 \alpha_{ij} = exp(e_{ij})/\sum_{j=1}^{T_x}exp(e_{ik})
 $$
