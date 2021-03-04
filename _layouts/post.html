@@ -8,9 +8,11 @@ layout: page
 
 <h1 class="title">{{ page.title }}</h1>
 
+<div style="text-align:center">
 <span class="date">
     <time datetime="{{ page.date | date:"%d-%m-%Y" }}">{{ page.date | date: "%A. %B %d, %Y" }}</time>
 </span>
+</div>
 
 {% if site.show-tags %}
     <div class="post-tags">
