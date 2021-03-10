@@ -61,21 +61,25 @@ Continuous representations of words 학습에 관한 연구는 1988년부터 지
 
 ### 1) Experimental setting
 
-<ul> C의 skipgram, cbow 모델과 비교 </ul>
-<ul> Optimization
-    <li> Stochastic Gradient Descent </li>
-    <li> training size = T </li>
-    <li> # of passes over the data = P </li>
-    <li> time = t </li>
-    <li> 𝛾_0이 fixed parameter일 때 step size = 𝛾_0 (1−𝑡/𝑇𝑃) </li>
+<ul>
+    <li> C의 skipgram, cbow 모델과 비교 </li>
+    <li> Optimization
+        <li> Stochastic Gradient Descent </li>
+        <li> training size = T </li>
+        <li> # of passes over the data = P </li>
+        <li> time = t </li>
+        <li> 𝛾_0이 fixed parameter일 때 step size = 𝛾_0 (1−𝑡/𝑇𝑃) </li>
+    </li>
 </ul>
-<ul> Implementation details
-    <li> word vectors dimension = 300 </li>
-    <li> negative samples = 5 (for each positive example) </li>
-    <li> context window size = c (uniformly sample the size c between 1 and 5) </li>
-    <li> rejection threshold = 1e-4 </li>
-    <li> keep the words that appear at least 5 times in the training set </li>
-    <li> 𝛾_0=0.025 (skipgram), 𝛾_0=0.05 (cbow, our model) </li>
+<ul>
+    <li> Implementation details
+        <li> word vectors dimension = 300 </li>
+        <li> negative samples = 5 (for each positive example) </li>
+        <li> context window size = c (uniformly sample the size c between 1 and 5) </li>
+        <li> rejection threshold = 1e-4 </li>
+        <li> keep the words that appear at least 5 times in the training set </li>
+        <li> 𝛾_0=0.025 (skipgram), 𝛾_0=0.05 (cbow, our model) </li>
+    </li>
 </ul>
 
 ### 2) Results
@@ -111,7 +115,7 @@ Training data size를 바꾸어 가며 similarity task에 대한 모델의 성�
 
 앞서 Section 3.2 Subword models에서 언급했듯이 이 논문에서는 3~6까지의 n-grams를 사용하였습니다.
 ![result5](/assets/images/yj/210311/result5.png)
-![result5](/assets/images/yj/210311/result5_2.png)
+![result5_2](/assets/images/yj/210311/result5_2.png)
 
 
 ## 6. Qualitative analysis
