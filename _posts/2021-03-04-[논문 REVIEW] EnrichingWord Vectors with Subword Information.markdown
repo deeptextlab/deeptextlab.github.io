@@ -27,6 +27,7 @@ Continuous representations of words 학습에 관한 연구는 1988년부터 지
 > In this paper, we propose to learn representations for character n-grams, and to represent words as the sum of the n-gram vectors. Our main contribution is to introduce an extension of the continuous skipgram model (Mikolov et al., 2013b), which takes into account subword information. We evaluate this model on nine languages exhibiting different morphologies, showing the benefit of our approach.
 
 <br>
+
 ## 2. Related Work
 
 ### 1) Morphological word representation
@@ -52,6 +53,7 @@ Continuous representations of words 학습에 관한 연구는 1988년부터 지
 * Sennrich et al. (2016), Luong and Manning (2016): machine translation에서 subword units을 사용하여 많이 존재하지 않는 단어들의 representation을 얻는 방식을 제안
 
 <br>
+
 ## 3. Model
 
 강의 때 설명 예정
@@ -116,6 +118,7 @@ Training data size를 바꾸어 가며 similarity task에 대한 모델의 성�
 ![result5_2](/assets/images/yj/210311/result5_2.png)
 
 <br>
+
 ## 5. Qualitative analysis
 
 ### 1) Nearest neighbors
@@ -135,6 +138,7 @@ Training data size를 바꾸어 가며 similarity task에 대한 모델의 성�
 ![qa3_2](/assets/images/yj/210311/qa3_2png)
 
 <br>
+
 ## 6. Conclusion
 
 This paper investigate a simple method to learn word representations by taking into account subword information. This paper's approach incorporates character n-grams into the skipgram model. This model trains fast and does not require any preprocessing or supervision.
