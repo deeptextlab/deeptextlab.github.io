@@ -61,7 +61,7 @@ Continuous representations of words 학습에 관한 연구는 1988년부터 지
 
 ### 1) Experimental setting
 
-C의 skipgram, cbow 모델과 비교
+C의 skipgram, cbow 모델과 비교 <br>
 Optimization
 <ul>
     <li> Stochastic Gradient Descent </li>
@@ -86,7 +86,7 @@ Implementation details
 
 Human judgement와 cosine similarity between the vector representations의 Spearman’s rank correlation coefficient를 측정합니다. 그러나 training data에 나타나지 않는 단어들(out-of-vocabulary)의 representation은 skipgram이나 cbow를 사용해서는 구할 수 없습니다. 결과 비교를 위해 이러한 단어들에는 기본 값으로 null vectors를 부여하였습니다. 이 때의 모델 이름은 'sisg -' 입니다. fastText를 사용하면 OOV 단어들에 대해서 각 단어의 n-gram vectors를 더함으로써 valid representation을 구할 수 있습니다. 이 때의 모델 이름은 'sisg (Subword Information Skip Gram)' 입니다.
 
-![result1](/assets/images/yj/210311/result1.png)
+![result1](./assets/images/yj/210311/result1.png)
 
 #### (2) Word analogies
 
