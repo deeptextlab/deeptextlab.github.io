@@ -26,7 +26,7 @@ Continuous representations of words 학습에 관한 연구는 1988년부터 지
 
 > In this paper, we propose to learn representations for character n-grams, and to represent words as the sum of the n-gram vectors. Our main contribution is to introduce an extension of the continuous skipgram model (Mikolov et al., 2013b), which takes into account subword information. We evaluate this model on nine languages exhibiting different morphologies, showing the benefit of our approach.
 
-
+<br>
 ## 2. Related Work
 
 ### 1) Morphological word representation
@@ -51,12 +51,12 @@ Continuous representations of words 학습에 관한 연구는 1988년부터 지
 * Convolutional neural networks: part-of-speech tagging, sentiment analysis, text classification, language modeling
 * Sennrich et al. (2016), Luong and Manning (2016): machine translation에서 subword units을 사용하여 많이 존재하지 않는 단어들의 representation을 얻는 방식을 제안
 
-
+<br>
 ## 3. Model
 
 강의 때 설명 예정
 
-
+<br>
 ## 4. Experimental setting / Results
 
 ### 1) Experimental setting
@@ -86,7 +86,7 @@ Implementation details
 
 Human judgement와 cosine similarity between the vector representations의 Spearman’s rank correlation coefficient를 측정합니다. 그러나 training data에 나타나지 않는 단어들(out-of-vocabulary)의 representation은 skipgram이나 cbow를 사용해서는 구할 수 없습니다. 결과 비교를 위해 이러한 단어들에는 기본 값으로 null vectors를 부여하였습니다. 이 때의 모델 이름은 'sisg -' 입니다. fastText를 사용하면 OOV 단어들에 대해서 각 단어의 n-gram vectors를 더함으로써 valid representation을 구할 수 있습니다. 이 때의 모델 이름은 'sisg (Subword Information Skip Gram)' 입니다.
 
-![result1](./assets/images/yj/210311/result1.png)
+![result1](/assets/images/yj/210311/result1.png)
 
 #### (2) Word analogies
 
@@ -115,8 +115,8 @@ Training data size를 바꾸어 가며 similarity task에 대한 모델의 성�
 ![result5](/assets/images/yj/210311/result5.png)
 ![result5_2](/assets/images/yj/210311/result5_2.png)
 
-
-## 6. Qualitative analysis
+<br>
+## 5. Qualitative analysis
 
 ### 1) Nearest neighbors
 
@@ -134,7 +134,7 @@ Training data size를 바꾸어 가며 similarity task에 대한 모델의 성�
 ![qa3](/assets/images/yj/210311/qa3.png)
 ![qa3_2](/assets/images/yj/210311/qa3_2png)
 
-
-## 7. Conclusion
+<br>
+## 6. Conclusion
 
 This paper investigate a simple method to learn word representations by taking into account subword information. This paper's approach incorporates character n-grams into the skipgram model. This model trains fast and does not require any preprocessing or supervision.
