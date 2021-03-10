@@ -38,8 +38,6 @@ Continuous representations of words 학습에 관한 연구는 1988년부터 지
 
 이러한 방식들은 단어들의 형태소 분리 (morphological decomposition)에 의존하나 논문에서 제안한 방식은 이에 의존하지 않습니다.
 
-<br>
-
 * Schütze (1993): singular value decomposition을 통해 representation of character four-grams 학습 & four-grams representations를 더해서 representation of words를 얻음
 
 이는 논문에서 제안한 방식과 가장 유사한 방식입니다.
@@ -107,7 +105,6 @@ We conducted evaluation on word analogy questions of the form A is to B as C is 
     <li> Botha and Blunsom (2014) – log-bilinear language model </li>
 </ul>
 
-<br>
 
 ![result3](/assets/images/yj/210311/result3.PNG)
 
