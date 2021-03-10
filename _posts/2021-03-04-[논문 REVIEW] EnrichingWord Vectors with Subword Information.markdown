@@ -104,7 +104,7 @@ We conducted evaluation on word analogy questions of the form A is to B as C is 
     <li> Luong et al. (2013) – recursive neural network </li>
     <li> Oiu et al. (2014) – morpheme cbow </li>
     <li> Soricut and Och (2015) – morphological transformations </li>
-    <li> Botha and Blunsom (2014) – log-bilinear language model <li>
+    <li> Botha and Blunsom (2014) – log-bilinear language model </li>
 </ul>
 
 ![result3](/assets/images/yj/210311/result3.PNG)
