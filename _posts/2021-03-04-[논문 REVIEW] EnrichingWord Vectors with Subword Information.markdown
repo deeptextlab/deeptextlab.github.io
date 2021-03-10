@@ -8,7 +8,7 @@ tag:
 category: blog
 author: yj
 description: "논문 REVIEW - EnrichingWord Vectors with Subword Information"
-use_math: true
+use_math: false
 ---
 
 <br><br>
@@ -61,25 +61,23 @@ Continuous representations of words 학습에 관한 연구는 1988년부터 지
 
 ### 1) Experimental setting
 
+C의 skipgram, cbow 모델과 비교
+Optimization
 <ul>
-    <li> C의 skipgram, cbow 모델과 비교 </li>
-    <li> Optimization
-        <li> Stochastic Gradient Descent </li>
-        <li> training size = T </li>
-        <li> # of passes over the data = P </li>
-        <li> time = t </li>
-        <li> 𝛾_0이 fixed parameter일 때 step size = 𝛾_0 (1−𝑡/𝑇𝑃) </li>
-    </li>
+    <li> Stochastic Gradient Descent </li>
+    <li> training size = T </li>
+    <li> # of passes over the data = P </li>
+    <li> time = t </li>
+    <li> 𝛾_0이 fixed parameter일 때 step size = 𝛾_0 (1−𝑡/𝑇𝑃) </li>
 </ul>
+Implementation details
 <ul>
-    <li> Implementation details
-        <li> word vectors dimension = 300 </li>
-        <li> negative samples = 5 (for each positive example) </li>
-        <li> context window size = c (uniformly sample the size c between 1 and 5) </li>
-        <li> rejection threshold = 1e-4 </li>
-        <li> keep the words that appear at least 5 times in the training set </li>
-        <li> 𝛾_0=0.025 (skipgram), 𝛾_0=0.05 (cbow, our model) </li>
-    </li>
+    <li> word vectors dimension = 300 </li>
+    <li> negative samples = 5 (for each positive example) </li>
+    <li> context window size = c (uniformly sample the size c between 1 and 5) </li>
+    <li> rejection threshold = 1e-4 </li>
+    <li> keep the words that appear at least 5 times in the training set </li>
+    <li> 𝛾_0=0.025 (skipgram), 𝛾_0=0.05 (cbow, our model) </li>
 </ul>
 
 ### 2) Results
