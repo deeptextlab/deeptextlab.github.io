@@ -105,6 +105,7 @@ We conducted evaluation on word analogy questions of the form A is to B as C is 
     <li> Soricut and Och (2015) – morphological transformations </li>
     <li> Botha and Blunsom (2014) – log-bilinear language model <li>
 </ul>
+
 ![result3](/assets/images/yj/210311/result3.PNG)
 
 #### (4) Effect of the size of the training data
